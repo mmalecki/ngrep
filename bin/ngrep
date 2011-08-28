@@ -2,7 +2,7 @@
 var ngrep = require('../lib/ngrep');
 
 function callback(result) {
-  console.log(result.context);
+  console.log(result.file + ': ' + result.context);
 }
 
 var pattern = new RegExp(process.argv[2], 'g');
