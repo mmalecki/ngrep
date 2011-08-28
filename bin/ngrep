@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+var ngrep = require('../lib/ngrep');
+
+function callback(result) {
+  console.log(result.context);
+}
+
+var pattern = new RegExp(process.argv[2], 'g');
+var target = process.argv[3];
+ngrep(pattern, target, callback);
+
