@@ -2,10 +2,24 @@
 var ngrep = require('../lib/ngrep');
 
 function callback(result) {
-  console.log(result.file + ': ' + result.context);
+  if (result.errno || result.message) {
+    console.error(result.message + ' (' + result.errno + ')');
+  }
+  else if (result != undefined) {
+    console.log(result.file + ': ' + result.context);
+  }
+  else {
+    console.error(result);
+  }
+}
+
+if (process.argv.length < 4) {
+  console.error('Insufficient arguments. Usage: ngrep PATTERN DIRECTORY');
+  process.exit(-1);
 }
 
 var pattern = new RegExp(process.argv[2], 'g');
 var target = process.argv[3];
+
 ngrep(pattern, target, callback);
 
