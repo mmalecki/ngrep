@@ -2,7 +2,7 @@
   "author": "Maciej Małecki <maciej.malecki@notimplemented.org>",
   "name": "ngrep",
   "description": "node-based grep utility",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "bin": {
     "ngrep": "./bin/ngrep"
   },
