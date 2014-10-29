@@ -1,5 +1,5 @@
 {
-  "author": "Maciej Małecki <maciej.malecki@notimplemented.org>",
+  "author": "Maciej Małecki <me@mmalecki.com>",
   "name": "ngrep",
   "description": "node-based grep utility",
   "version": "0.0.0",
