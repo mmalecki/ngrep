@@ -1,21 +1,32 @@
 {
-  "author": "Maciej Małecki <maciej.malecki@notimplemented.org>",
+  "author": "Maciej Małecki <me@mmalecki.com>",
   "name": "ngrep",
   "description": "node-based grep utility",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "bin": {
     "ngrep": "./bin/ngrep"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mmalecki/ngrep.git"
+    "url": "https://github.com/mmalecki/ngrep.git"
   },
   "main": "./lib/ngrep.js",
   "engines": {
     "node": ">=v0.4"
   },
-  "keywords": ["grep", "search", "cli"],
+  "keywords": [
+    "grep",
+    "search",
+    "cli"
+  ],
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "once": "^1.3.1"
+  },
+  "devDependencies": {
+    "assert-called": "^0.1.2-1"
+  },
+  "scripts": {
+    "test": "node test/basic-test.js"
+  }
 }
